@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navhome"
+        android:title="Home"
+        android:icon="@drawable/ic_navhome"/>
+    <item
+        android:id="@+id/navdonor"
+        android:title="Donor"
+        android:icon="@drawable/ic_navdonor" />
+    <item
+        android:id="@+id/navplaceholder"
+        android:title=" "/>
+    <item
+        android:id="@+id/navreceiver"
+        android:title="Receiver"
+        android:icon="@drawable/ic_navreceiver" />
+    <item
+        android:id="@+id/navprofile"
+        android:title="Profile"
+        android:icon="@drawable/ic_navprofile" />
+</menu>

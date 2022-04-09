@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonationCommunity">
         <activity
+            android:name=".LogIn"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalDetails"
+            android:exported="false" />
+        <activity
             android:name=".SetPassword"
             android:exported="false" />
         <activity
@@ -17,11 +23,10 @@
             android:exported="false" />
         <activity
             android:name=".CreateAcc"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".WelcomePage"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,9 +35,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

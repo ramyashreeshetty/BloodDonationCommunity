@@ -3,12 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/drawable/backarrow.xml" value="0.2425" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/drawable/border_rect_box.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/drawable/ic_navblood.xml" value="0.2425" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/drawable/line_rect.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_create_acc.xml" value="0.4" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/drawable/transparent_bg.xml" value="0.2425" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout-v21/activity_personal_details.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_create_acc.xml" value="0.25" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_log_in.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_verify_otp.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_personal_details.xml" value="0.264" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_set_password.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_verify_otp.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_welcome_page.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/bottom_nav_menu.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/items_list.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19410004275331338" />
       </map>
     </option>
   </component>

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class CreateAcc extends AppCompatActivity {
 
-    TextView createnextbtn;
+    Button createnextbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
