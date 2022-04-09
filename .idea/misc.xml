@@ -11,14 +11,21 @@
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout-v21/activity_personal_details.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_create_acc.xml" value="0.25" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_log_in.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_personal_details.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_set_password.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_verify_otp.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/activity_welcome_page.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/bottom_nav_menu.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/fragment_donor.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/fragment_home.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/fragment_notif.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/fragment_post.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/fragment_profile.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/fragment_receiver.xml" value="0.19410004275331338" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/layout/items_list.xml" value="0.19410004275331338" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/Final year project/app/src/main/res/menu/top_nav_menu.xml" value="0.19410004275331338" />
       </map>
     </option>
   </component>
