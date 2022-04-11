@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teamrocket.blooddonationcommunity">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BloodDonationCommunity">
+        <activity
+            android:name=".WelcomePage"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VerifyOtp"
+            android:exported="false" />
+        <activity
+            android:name=".SetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".PostReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".PostDonor"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalDetails"
+            android:exported="false" />
+        <activity
+            android:name=".LogIn"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAcc"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+
+        </activity>
+    </application>
+
+</manifest>

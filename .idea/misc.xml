@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_create_acc.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_log_in.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_personal_details.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_post_donor.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_post_receiver.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_set_password.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_verify_otp.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_welcome_page.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_donor.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_home.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_notif.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_post.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_profile.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_receiver.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/items_list.xml" value="0.264" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/menu/top_nav_menu.xml" value="0.23645833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
