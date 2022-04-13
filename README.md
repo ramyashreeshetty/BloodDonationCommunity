@@ -1,7 +1,15 @@
 # BloodDonationCommunity
 
-![]()
 
+<img
+     align="center"
+   style="display: block; 
+   margin-left: auto;
+   margin-right: auto;"
+     src="app/src/main/res/drawable/blood_logo.png" width="200px"/>
+
+<br/>
+	
 This Project is created with the purpose of developing an **Android Application** that provides an online community platform to users to search for Blood Donors and those who are in need of Blood.
 
 A user can make a *post request* similar to a post feed in Facebook, Instagram, Tweeter, etc. based on their needs whether
