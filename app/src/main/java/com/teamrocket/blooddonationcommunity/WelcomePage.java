@@ -23,6 +23,7 @@ public class WelcomePage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(WelcomePage.this,CreateAcc.class);
                 startActivity(i);
+                finish();
             }
         });
 
