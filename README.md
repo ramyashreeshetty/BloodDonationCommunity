@@ -10,6 +10,8 @@ A user can make a *post request* similar to a post feed in Facebook, Instagram, 
 - They are in need of a Blood Donor and make a request.
 
 
+## Features
+
 ### Making a Post
 
 A post can be made by selecting the *Post button* and choosing whether you want to post as a **Donor** or as a **Receiver**.
