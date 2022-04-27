@@ -91,6 +91,8 @@
                     android:elevation="5dp"
                     android:hint="First Name"
                     android:padding="10dp"
+                    android:textColor="@color/bloodred"
+                    android:fontFamily="@font/segoeui"
                     android:textColorHint="@color/bloodred"
                     android:textSize="14dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +111,8 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/border_rect_box"
                     android:elevation="5dp"
+                    android:textColor="@color/bloodred"
+                    android:fontFamily="@font/segoeui"
                     android:hint="Last Name"
                     android:padding="10dp"
                     android:textColorHint="@color/bloodred"
@@ -119,7 +123,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/firstname" />
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/emailAdd"
                     android:layout_width="350dp"
                     android:layout_height="65dp"
                     android:layout_alignParentStart="true"
@@ -131,6 +135,8 @@
                     android:elevation="5dp"
                     android:hint="E-mail Address"
                     android:padding="10dp"
+                    android:textColor="@color/bloodred"
+                    android:fontFamily="@font/segoeui"
                     android:textColorHint="@color/bloodred"
                     android:textSize="14dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -151,11 +157,12 @@
                     android:padding="10dp"
                     android:textColorHint="@color/bloodred"
                     android:textSize="14dp"
+                    android:fontFamily="@font/segoeui"
                     android:textColor="@color/bloodred"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.128"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/email" />
+                    app:layout_constraintTop_toBottomOf="@+id/emailAdd" />
 
                 <ImageView
                     android:id="@+id/btn_date"
@@ -182,16 +189,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.25"
                     app:layout_constraintStart_toEndOf="@+id/in_date"
-                    app:layout_constraintTop_toBottomOf="@+id/email">
+                    app:layout_constraintTop_toBottomOf="@+id/emailAdd">
 
 
                     <AutoCompleteTextView
-                        android:id="@+id/autoCompleteTextView"
+                        android:id="@+id/bloodGroupAutoText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:inputType="none"
                         tools:text="Blood Group"
+                        android:fontFamily="@font/segoeui"
                         android:textSize="14dp"
                         android:textColor="@color/bloodred"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -207,14 +215,33 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/border_rect_box"
                     android:elevation="5dp"
-                    android:hint="Residential Address"
+                    android:hint="Get the Current Location"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:clickable="false"
                     android:padding="10dp"
                     android:textColorHint="@color/bloodred"
                     android:textSize="14dp"
+                    android:textColor="@color/bloodred"
+                    android:fontFamily="@font/segoeui"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.508"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/in_date" />
+                    app:layout_constraintTop_toBottomOf="@+id/in_date"/>
+
+                <ImageView
+                    android:id="@+id/getCurrentLoc"
+                    android:layout_width="26dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/my_location"
+                    android:gravity="end"
+                    android:elevation="15dp"
+                    android:layout_margin="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/residential"
+                    app:layout_constraintEnd_toEndOf="@+id/residential"
+                    app:layout_constraintTop_toTopOf="@+id/residential" />
+
+
 
                 <EditText
                     android:id="@+id/aadharcard"
@@ -231,6 +258,9 @@
                     android:padding="10dp"
                     android:textColorHint="@color/bloodred"
                     android:textSize="14dp"
+                    android:textColor="@color/bloodred"
+                    android:fontFamily="@font/segoeui"
+                    android:maxLength="12"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.508"
                     app:layout_constraintStart_toStartOf="parent"
@@ -278,12 +308,13 @@
                 android:layout_width="90dp"
                 android:layout_height="36dp"
                 android:layout_margin="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/bloodred"
                 android:gravity="center"
                 android:text="  Next"
-                android:textSize="10dp"
+                android:textSize="11sp"
+                android:fontFamily="@font/segoeui"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

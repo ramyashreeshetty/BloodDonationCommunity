@@ -6,6 +6,121 @@
     android:layout_height="match_parent"
     tools:context=".LogIn">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TopStick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/setpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="164dp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="top"
+            android:maxLines="1"
+            android:text="Log In"
+            android:textColor="@color/bloodred"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/logPhoneNum"
+            android:layout_width="310dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/border_rect_box"
+            android:elevation="5dp"
+            android:hint="Enter Your Phone Number"
+            android:padding="10dp"
+            android:inputType="phone"
+            android:maxLines="10"
+            android:textSize="16sp"
+            android:textColor="@color/bloodred"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setpass" />
+
+
+        <EditText
+            android:id="@+id/logPin"
+            android:layout_width="310dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border_rect_box"
+            android:elevation="5dp"
+            android:hint="Enter Your 4 Digit Pin"
+            android:padding="10dp"
+            android:maxLines="4"
+            android:textSize="16sp"
+            android:textColor="@color/bloodred"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logPhoneNum" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/logPin">
+        </View>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/BottomStick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#16000000"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/lognextbtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </Button>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/lognextbtn"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/bloodred"
+                android:gravity="center"
+                android:text="  Login"
+                android:textSize="11sp"
+                android:fontFamily="@font/segoeui"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

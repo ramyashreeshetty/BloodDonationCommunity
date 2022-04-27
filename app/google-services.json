@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "786435141656",
+    "firebase_url": "https://blood-donation-community-1000-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "blood-donation-community-1000",
     "storage_bucket": "blood-donation-community-1000.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "786435141656-jjeqd6s89nmud4vddurk0pao1b9vkt1q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamrocket.blooddonationcommunity",
+            "certificate_hash": "82be3842966f0ecd20b3a4ff9f7413ff3add5ed5"
+          }
+        },
         {
           "client_id": "786435141656-pgqllru5r60qt50uv97bl9id7vsmft5f.apps.googleusercontent.com",
           "client_type": 3
