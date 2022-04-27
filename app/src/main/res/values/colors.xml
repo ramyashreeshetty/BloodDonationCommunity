@@ -8,5 +8,6 @@
     <color name="secred">#FF576E</color>
     <color name="greyblack">#4D4D4D</color>
     <color name="cardtextcolor">#2C2C2C</color>
+    <color name="appTextBlack">#515151</color>
 
 </resources>

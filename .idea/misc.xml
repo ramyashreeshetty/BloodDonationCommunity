@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/activity_main.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/activity_personal_details.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/activity_post_donor.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/activity_post_receiver.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/activity_profile_setting.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/activity_welcome_page.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_home.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_post.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_profile_setting.xml" value="0.264" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_receiver.xml" value="0.2552083333333333" />
+        <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/items_list.xml" value="0.2552083333333333" />
+
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_create_acc.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_log_in.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
