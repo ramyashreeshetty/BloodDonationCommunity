@@ -11,7 +11,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 
 public class WelcomePage extends AppCompatActivity {
 
-    TextView createAcc;
+    ExtendedFloatingActionButton createAcc;
     ExtendedFloatingActionButton loginBtn;
 
     @Override
@@ -20,7 +20,7 @@ public class WelcomePage extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_page);
 
         //create Account
-        createAcc=findViewById(R.id.createAccBtn);
+        createAcc=findViewById(R.id.signUpBtn);
         createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

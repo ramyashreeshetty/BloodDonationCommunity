@@ -41,7 +41,7 @@ public class CreateAcc extends AppCompatActivity {
                 if(!num.isEmpty()) {
                     if (num.length() == 10) {
 
-                        Intent intent = new Intent(CreateAcc.this, SetPassword.class);
+                        Intent intent = new Intent(CreateAcc.this, MainActivity.class);
                         intent.putExtra("mobile",num);
                         startActivity(intent);
 

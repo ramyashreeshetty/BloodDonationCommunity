@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:cardCornerRadius="12dp"
-        app:cardBackgroundColor="#FE899A"
+        app:cardBackgroundColor="#F3ADB7"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,13 +24,13 @@
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
+                android:id="@+id/cardProfileImg"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:src="@drawable/loli"
                 android:layout_margin="12dp"
-                app:civ_border_width="1dp"
-                app:civ_border_color="@color/bloodred"/>
+                app:civ_border_width="0.5dp"
+                app:civ_border_color="@color/cardtextcolor"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,6 +42,7 @@
                 android:paddingRight="8dp">
 
                 <TextView
+                    android:id="@+id/cardFullName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Loli Loli"
@@ -64,6 +65,7 @@
                         android:fontFamily="@font/segoeui"/>
 
                     <TextView
+                        android:id="@+id/cardBloodGroup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="B(+)"
@@ -83,11 +85,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/segoeui"
-                        android:text="Age: "
+                        android:text="Birth Date: "
                         android:textColor="@color/cardtextcolor"
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/cardAge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="8"
@@ -149,18 +152,6 @@
                             android:fontFamily="@font/segoeui"/>
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:text="Go to Profile"
-                        android:textSize="10dp"
-                        android:layout_marginLeft="28dp"
-                        android:background="@color/cardtextcolor"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/segoeui"
-                        android:layout_gravity="bottom"
-                        android:elevation="50dp"/>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -180,34 +171,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profileCard"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/homeDivider"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Featured"
-                android:textSize="22sp"
-                android:textColor="@color/cardtextcolor"
-                android:fontFamily="@font/segoeuibold"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"/>
-
-        </LinearLayout>
-
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
