@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@color/bloodred"
     tools:context=".SplashScreen">
 
     <ImageView
         android:id="@+id/splashScreenGif"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/blood_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/blood_logo_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -18,7 +18,7 @@
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Blood Donation Community"
+            app:title="LIFESTREAM"
             app:menu="@menu/top_nav_menu"
             app:layout_scrollFlags="scroll|enterAlways|snap"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"

@@ -7,14 +7,14 @@
     <item
         android:id="@+id/navdonor"
         android:title="Donor"
-        android:icon="@drawable/ic_navdonor" />
+        android:icon="@drawable/ic_navreceiver" />
     <item
         android:id="@+id/navplaceholder"
         android:title=" "/>
     <item
         android:id="@+id/navreceiver"
         android:title="Receiver"
-        android:icon="@drawable/ic_navreceiver" />
+        android:icon="@drawable/ic_navdonor" />
     <item
         android:id="@+id/navprofile"
         android:title="Profile"

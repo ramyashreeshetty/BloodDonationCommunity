@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,8 +27,10 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.NotNull;
 
 import java.util.Objects;
@@ -46,6 +49,8 @@ public class VerifyOtp extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String verificationId;
     private PhoneAuthProvider.ForceResendingToken resendOTPtoken;
+    public String uid;
+    public String verNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,17 +139,54 @@ public class VerifyOtp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Intent intent = new Intent(VerifyOtp.this, SetPassword.class);
-                            intent.putExtra("mobile",phonenumber_value);
-                            startActivity(intent);
-                            Toast.makeText(VerifyOtp.this, "User verified", Toast.LENGTH_SHORT).show();
+                            //Fetch Uid to check if exists or not!
+                            uid = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
+                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
+                            ref.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    if (dataSnapshot.exists()) {
 
+                                        verNum=dataSnapshot.child("phone_number").getValue(String.class);
+                                        Toast.makeText(VerifyOtp.this, verNum, Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(VerifyOtp.this, phonenumber_value, Toast.LENGTH_SHORT).show();
+
+                                        if(verNum.equals(phonenumber_value)) {
+                                            SharedPreferences prefs = getSharedPreferences("prefs_tag",Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = prefs.edit();
+                                            editor.putBoolean("login", true).apply();
+
+                                            Toast.makeText(VerifyOtp.this, "Logged In", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(VerifyOtp.this, MainActivity.class);
+                                            startActivity(intent);
+                                        }
+                                        else{
+                                            Toast.makeText(VerifyOtp.this, "phone num already exists", Toast.LENGTH_SHORT).show();
+//                                            Intent intent = new Intent(VerifyOtp.this, PersonalDetails.class);
+//                                            intent.putExtra("mobile", phonenumber_value);
+//                                            startActivity(intent);
+                                        }
+
+                                    } else {
+                                        Toast.makeText(VerifyOtp.this, "New User", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(VerifyOtp.this, PersonalDetails.class);
+                                        intent.putExtra("mobile", phonenumber_value);
+                                        startActivity(intent);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
                         }
                         else {
                             Toast.makeText(VerifyOtp.this, "Fail to verify the user..", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+
         }
 
     private void sendVerificationCode(String number) {

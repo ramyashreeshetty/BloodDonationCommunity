@@ -12,6 +12,7 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.location.Address;
@@ -76,7 +77,7 @@ public class PersonalDetails extends AppCompatActivity implements LocationListen
 
     //Intent details
     public String phoneNumber;
-    public String pinKey;
+    //public String pinKey;
 
     //For Intent
     ExtendedFloatingActionButton saveBtn;
@@ -204,8 +205,8 @@ public class PersonalDetails extends AppCompatActivity implements LocationListen
                 aadharNum=aadharnum.getText().toString().trim();
 
                 //intent extras
-                phoneNumber = getIntent().getStringExtra("phone_number");
-                pinKey=getIntent().getStringExtra("pin");
+                phoneNumber = getIntent().getStringExtra("mobile");
+                //pinKey=getIntent().getStringExtra("pin");
 
                 //Verifying Name -->
                 if (firstName.isEmpty() || lastName.isEmpty()) {
@@ -266,7 +267,7 @@ public class PersonalDetails extends AppCompatActivity implements LocationListen
                 HashMap<String, String> map = new HashMap<>();
                 map.put("uid",uid);
                 map.put("phone_number",phoneNumber);
-                map.put("pin",pinKey);
+                //map.put("pin",pinKey);
                 map.put("full_name",fullName);
                 map.put("email_id",emailId);
                 map.put("birth_date",birthDate);
@@ -278,11 +279,19 @@ public class PersonalDetails extends AppCompatActivity implements LocationListen
                 FirebaseDatabase database = FirebaseDatabase.getInstance("https://blood-donation-community-1000-default-rtdb.asia-southeast1.firebasedatabase.app");
                 DatabaseReference myRef = database.getReference("Users");
 
-                //Push Value
+                //Pushing User Details
                 myRef.child(uid).setValue(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(PersonalDetails.this, "User added", Toast.LENGTH_SHORT).show();
+
+                        //Shared Preferences
+                        SharedPreferences prefs = getSharedPreferences("prefs_tag",Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("login", true).apply();
+
+                        Toast.makeText(PersonalDetails.this, "Welcome!", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(PersonalDetails.this,MainActivity.class);
+                        startActivity(i);
                     }
                 })
                         .addOnFailureListener(new OnFailureListener() {
@@ -293,8 +302,6 @@ public class PersonalDetails extends AppCompatActivity implements LocationListen
                             }
                         });
 
-                Intent i = new Intent(PersonalDetails.this,MainActivity.class);
-                startActivity(i);
             }
 
         });
@@ -401,7 +408,7 @@ public class PersonalDetails extends AppCompatActivity implements LocationListen
             Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
 
-            locCity=addresses.get(0).getLocality();
+            locCity=addresses.get(0).getSubAdminArea();
             locState=addresses.get(0).getAdminArea();
             locCountry=addresses.get(0).getCountryName();
 

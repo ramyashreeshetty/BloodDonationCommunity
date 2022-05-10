@@ -1,22 +1,28 @@
 package com.teamrocket.blooddonationcommunity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -24,8 +30,15 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeFragment extends Fragment {
 
+    MaterialCardView cardFeatured;
+    MaterialCardView cardCamp;
+    MaterialCardView cardBloodBanks;
+
     TextView cardFullName,cardBloodGroup,cardAge;
     CircleImageView cardProfileImg;
+
+    FirebaseStorage storage;
+    StorageReference reference;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,6 +73,52 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        storage = FirebaseStorage.getInstance();
+        reference = storage.getReference().child("Users/").child("images/").child(uid);
+        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                // Got the download URL for 'users/me/profile.png'
+                Picasso.get().load(uri).into(cardProfileImg);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+            }
+        });
+
+        cardFeatured=v.findViewById(R.id.cardFeatured);
+
+        cardFeatured.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Featured.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
+        cardCamp=v.findViewById(R.id.cardCamp);
+
+        cardCamp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), DonationCamp.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
+
+        cardBloodBanks=v.findViewById(R.id.cardBloodBanks);
+
+        cardBloodBanks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BloodBank.class);
+                getActivity().startActivity(intent);
             }
         });
 

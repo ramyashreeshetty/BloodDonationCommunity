@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.navhome:
                         fragment=new HomeFragment();
-                        topAppBar.setTitle("Blood Donation Community");
+                        topAppBar.setTitle("LIFESTREAM");
                         break;
                     case R.id.navdonor:
                         fragment=new DonorFragment();

@@ -9,12 +9,11 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="340dp"
-        android:layout_height="330dp"
+        android:layout_height="340dp"
         android:background="@drawable/welcome_page_logo"
         android:elevation="25dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,43 +21,42 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/segoeui"
-        android:text="Welcome to the Community"
+        android:fontFamily="@font/bungee_shade"
+        android:text="LIFESTREAM"
+        android:layout_marginTop="5dp"
         android:textColor="@color/bloodred"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/segoeui"
-        android:text="How would you like to continue?"
-        android:textColor="@color/greyblack"
-        android:textSize="20sp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/segoeuiitalic"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:text="&quot;Your little efforts can give others second chance to live life&quot;"
+        android:textColor="#7C6C6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/logInBtn"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/segoeui"
-        android:gravity="center"
-        android:text=" Log In"
-        android:textColor="@color/white"
-        app:elevation="30dp"
-        android:layout_marginTop="30dp"
+        android:fontFamily="@font/segoeuibold"
+        android:text="To Save Lives, Join Us"
+        android:textColor="@color/bloodred"
+        android:textSize="20sp"
+        android:layout_marginTop="85dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/signUpBtn"
@@ -66,12 +64,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoeui"
         android:gravity="center"
-        android:text=" Sign up"
-        android:layout_marginTop="20dp"
+        android:text=" Sign up / log in"
         android:textColor="@color/white"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logInBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -168,21 +168,34 @@
 
             <EditText
                 android:id="@+id/locPostDon"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@drawable/border_rect_box_post"
                 android:hint="Location"
                 android:padding="10dp"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/locDon" />
+
+            <ImageView
+                android:id="@+id/getCurrentLoc"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_margin="14dp"
+                android:elevation="25dp"
+                android:gravity="end"
+                android:src="@drawable/my_location"
+                app:layout_constraintBottom_toBottomOf="@+id/locPostDon"
+                app:layout_constraintEnd_toEndOf="@+id/locPostDon"
+                app:layout_constraintTop_toTopOf="@+id/locPostDon" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="50dp"
                 android:fontFamily="@font/segoeui"
                 android:gravity="center"
                 android:text=" Post"

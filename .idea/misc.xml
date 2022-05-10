@@ -15,27 +15,44 @@
         <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_profile_setting.xml" value="0.264" />
         <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/fragment_receiver.xml" value="0.2552083333333333" />
         <entry key="..\:/Project/Blood Donor/app/src/main/res/layout/items_list.xml" value="0.2552083333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/backarrow.xml" value="0.228" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/border_rect_box.xml" value="0.228" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/card_effect.xml" value="0.228" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.228" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/line_rect.xml" value="0.228" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/search_icon.xml" value="0.228" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/splash_svg.xml" value="0.1825" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/drawable/transparent_bg.xml" value="0.228" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_blood_bank.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_create_acc.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_donation_camp.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_featured.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_log_in.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_personal_details.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_post_donor.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_post_receiver.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_set_password.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_set_pin.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_splash_screen.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_track_map.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_verify_otp.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/activity_welcome_page.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_donor.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_featured.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_notif.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_post.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_profile.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_profile_setting.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_receiver.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/fragment_receiver_desc.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/items_list.xml" value="0.264" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/layout/receiver_item.xml" value="0.264" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/menu/home_nav_menu.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/menu/top_nav_menu.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/BloodDonationCommunity/app/src/main/res/menu/top_post_menu.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>

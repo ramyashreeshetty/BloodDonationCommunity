@@ -17,6 +17,7 @@ public class WelcomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_welcome_page);
 
         //create Account
@@ -27,16 +28,6 @@ public class WelcomePage extends AppCompatActivity {
                 Intent i=new Intent(WelcomePage.this,CreateAcc.class);
                 startActivity(i);
                 finish();
-            }
-        });
-
-        //log in
-        loginBtn=findViewById(R.id.logInBtn);
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(WelcomePage.this,LogIn.class);
-                startActivity(i);
             }
         });
 

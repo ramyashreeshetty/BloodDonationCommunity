@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="16dp"
+    android:backgroundTint="#EAFFFD">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:elevation="5dp"
+                    android:src="@drawable/rec_blood_icon"
+                    android:padding="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Required Blood Group : "
+                            android:fontFamily="@font/segoeui"
+                            android:textColor="@color/cardtextcolor"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/receiverBG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" (B+)"
+                            android:fontFamily="@font/segoeuibold"
+                            android:textColor="@color/cardtextcolor"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="City : "
+                            android:fontFamily="@font/segoeui"
+                            android:textColor="@color/cardtextcolor"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/receiverCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" My City"
+                            android:fontFamily="@font/segoeuibold"
+                            android:textColor="@color/cardtextcolor"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:fontFamily="@font/segoeui"
+                            android:textColor="@color/cardtextcolor"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/receiverName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Your Name"
+                            android:paddingBottom="10dp"
+                            android:fontFamily="@font/segoeuibold"
+                            android:textColor="@color/cardtextcolor"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expandedReceiverCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Message : "
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/greyblack"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/receiverMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Message will be Displayed Here, It will have a detailed Info about everything."
+                        android:fontFamily="@font/segoeuibold"
+                        android:textColor="@color/greyblack"
+                        android:textSize="15sp"
+                        android:paddingEnd="10dp"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact : "
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/greyblack"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/receiverPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Phone Number"
+                        android:fontFamily="@font/segoeuibold"
+                        android:textColor="@color/greyblack"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : "
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/greyblack"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/receiverDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Date "
+                        android:fontFamily="@font/segoeuibold"
+                        android:textColor="@color/greyblack"
+                        android:textSize="15sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_marginEnd="90dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time : "
+                            android:fontFamily="@font/segoeui"
+                            android:textColor="@color/greyblack"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/receiverTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Time"
+                            android:fontFamily="@font/segoeuibold"
+                            android:textColor="@color/greyblack"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp"
+                    android:layout_gravity="center"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingEnd="40dp"
+                        android:paddingBottom="3dp">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/cardCallBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            app:borderWidth="0dp"
+                            app:tint="@color/secred"
+                            app:elevation="5dp"
+                            app:useCompatPadding="true"
+                            android:src="@drawable/ic_baseline_call_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Call"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuibold"
+                            android:textColor="@color/greyblack"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="40dp"
+                        android:paddingBottom="3dp">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/cardTrackBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            app:borderWidth="0dp"
+                            app:tint="@color/secred"
+                            app:elevation="5dp"
+                            app:useCompatPadding="true"
+                            android:src="@drawable/card_track_ic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Track"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/segoeuibold"
+                            android:textColor="@color/greyblack"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/cardtextcolor">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap for More details"
+                    android:textSize="13sp"
+                    android:padding="8dp"
+                    android:paddingStart="15dp"
+                    android:fontFamily="@font/segoeui"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200m"
+                    android:fontFamily="@font/segoeui"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingEnd="15dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>

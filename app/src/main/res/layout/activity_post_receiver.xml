@@ -55,6 +55,19 @@
                 app:layout_constraintTop_toBottomOf="@id/makeAPost"/>
 
             <TextView
+                android:id="@+id/pointsToRem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:text="Points to remember:\nCreated Post will be displayed on the Receiver Feed.\nDonor will contact using phone number.\nPost will be valid for 3days.\nAll necessary details must be provided in message"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/secred"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recPostDivider" />
+
+            <TextView
                 android:id="@+id/bloodTypeRe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,7 +79,7 @@
                 android:textColor="@color/cardtextcolor"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/makeAPost" />
+                app:layout_constraintTop_toBottomOf="@id/pointsToRem" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/bloodGroupRec"
@@ -84,7 +97,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/bloodTypeRe">
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
+                    android:id="@+id/autoCompleteTextRec"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -123,7 +136,7 @@
                 android:clickable="false"
                 android:enabled="false"
                 android:focusable="false"
-                android:hint="Birth Date"
+                android:hint="Date"
                 android:inputType="none"
                 android:padding="10dp"
                 android:textColor="@color/cardtextcolor"
@@ -132,14 +145,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
             <ImageView
-                android:id="@+id/btn_date"
+                android:id="@+id/btn_date_rec"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_margin="14dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/udate"
-                android:backgroundTint="@color/cardtextcolor"
+                android:backgroundTint="@color/bloodred"
                 android:gravity="end"
                 app:layout_constraintBottom_toBottomOf="@+id/dateRec"
                 app:layout_constraintEnd_toEndOf="@+id/dateRec"
@@ -188,7 +201,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTimeRec" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/editMsgRec"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="15dp"
@@ -214,25 +227,39 @@
                 android:textColor="@color/cardtextcolor"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintTop_toBottomOf="@+id/editMsgRec" />
 
             <EditText
                 android:id="@+id/locPostRec"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:background="@drawable/border_rect_box_post"
                 android:hint="Location"
                 android:padding="10dp"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/locRec" />
 
+            <ImageView
+                android:id="@+id/getCurrentLocRec"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_margin="14dp"
+                android:elevation="25dp"
+                android:gravity="end"
+                android:src="@drawable/my_location"
+                app:layout_constraintBottom_toBottomOf="@+id/locPostRec"
+                app:layout_constraintEnd_toEndOf="@+id/locPostRec"
+                app:layout_constraintTop_toTopOf="@+id/locPostRec" />
+
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/postReceiverBtn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="60dp"
                 android:fontFamily="@font/segoeui"
                 android:gravity="center"
                 android:text=" Post"

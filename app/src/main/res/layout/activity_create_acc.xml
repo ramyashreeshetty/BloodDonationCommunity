@@ -15,73 +15,42 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/welcometo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/segoeui"
-            android:text="Welcome To"
-            android:textColor="@color/bloodred"
-            android:textSize="25dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintEnd_toEndOf="@id/TopStick"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@id/TopStick"
-            app:layout_constraintTop_toTopOf="@id/TopStick" />
-
-        <TextView
-            android:id="@+id/bdcapp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Blood Donors"
-            android:textColor="@color/bloodred"
-            android:textSize="40dp"
-            app:layout_constraintEnd_toEndOf="@id/TopStick"
-            app:layout_constraintStart_toStartOf="@id/TopStick"
-            app:layout_constraintTop_toBottomOf="@+id/welcometo" />
-
-        <TextView
             android:id="@+id/community"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:fontFamily="@font/segoeuibold"
-            android:text="Community"
+            android:fontFamily="@font/bungee_shade"
+            android:text="Welcome to Lifestream"
             android:textColor="@color/bloodred"
-            android:textSize="40dp"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bdcapp" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/create_acc_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/community" />
 
         <TextView
             android:id="@+id/mobnum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="176dp"
+            android:fontFamily="@font/segoeui"
             android:text="Enter Mobile Number"
             android:textColor="@color/bloodred"
             android:textSize="20sp"
-            android:fontFamily="@font/segoeui"
+            android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.225"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/community" />
-
-        <TextView
-            android:id="@+id/createacc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/segoeui"
-            android:text="Create Your Account"
-            android:textColor="@color/bloodred"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/community" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/line_32"
@@ -129,6 +98,7 @@
             android:hint="Mobile Number"
             android:inputType="phone"
             android:maxLength="10"
+            android:maxLines="1"
             android:textSize="16sp"
             android:textColor="@color/greyblack"
             android:fontFamily="@font/segoeui"
