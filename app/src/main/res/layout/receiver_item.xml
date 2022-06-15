@@ -6,7 +6,7 @@
     app:cardElevation="15dp"
     app:cardCornerRadius="15dp"
     android:layout_margin="16dp"
-    android:backgroundTint="#EAFFFD">
+    android:backgroundTint="@color/cardBlue">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -23,7 +23,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:elevation="5dp"
-                    android:src="@drawable/rec_blood_icon"
+                    android:src="@drawable/rec_icon_feed"
                     android:padding="20dp"/>
 
                 <LinearLayout
@@ -35,7 +35,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingTop="12dp">
+                        android:paddingTop="15dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
                             android:text="Required Blood Group : "
                             android:fontFamily="@font/segoeui"
                             android:textColor="@color/cardtextcolor"
-                            android:textSize="16sp"/>
+                            android:textSize="13sp"/>
 
                         <TextView
                             android:id="@+id/receiverBG"
@@ -52,7 +52,7 @@
                             android:text=" (B+)"
                             android:fontFamily="@font/segoeuibold"
                             android:textColor="@color/cardtextcolor"
-                            android:textSize="16sp"/>
+                            android:textSize="13sp"/>
 
                     </LinearLayout>
 
@@ -68,7 +68,7 @@
                             android:text="City : "
                             android:fontFamily="@font/segoeui"
                             android:textColor="@color/cardtextcolor"
-                            android:textSize="16sp"/>
+                            android:textSize="13sp"/>
 
                         <TextView
                             android:id="@+id/receiverCity"
@@ -77,7 +77,7 @@
                             android:text=" My City"
                             android:fontFamily="@font/segoeuibold"
                             android:textColor="@color/cardtextcolor"
-                            android:textSize="16sp"/>
+                            android:textSize="13sp"/>
 
                     </LinearLayout>
 
@@ -93,7 +93,7 @@
                             android:text="Name : "
                             android:fontFamily="@font/segoeui"
                             android:textColor="@color/cardtextcolor"
-                            android:textSize="16sp"/>
+                            android:textSize="13sp"/>
 
                         <TextView
                             android:id="@+id/receiverName"
@@ -103,9 +103,21 @@
                             android:paddingBottom="10dp"
                             android:fontFamily="@font/segoeuibold"
                             android:textColor="@color/cardtextcolor"
-                            android:textSize="16sp"/>
-
+                            android:textSize="13sp"/>
                     </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/doneBtn"
+                        android:layout_margin="10dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/done_btn"/>
 
                 </LinearLayout>
 
@@ -131,7 +143,7 @@
                         android:text="Message : "
                         android:fontFamily="@font/segoeui"
                         android:textColor="@color/greyblack"
-                        android:textSize="15sp"/>
+                        android:textSize="12sp"/>
 
                     <TextView
                         android:id="@+id/receiverMsg"
@@ -140,7 +152,7 @@
                         android:text="Your Message will be Displayed Here, It will have a detailed Info about everything."
                         android:fontFamily="@font/segoeuibold"
                         android:textColor="@color/greyblack"
-                        android:textSize="15sp"
+                        android:textSize="12sp"
                         android:paddingEnd="10dp"/>
 
                 </LinearLayout>
@@ -161,7 +173,7 @@
                         android:text="Contact : "
                         android:fontFamily="@font/segoeui"
                         android:textColor="@color/greyblack"
-                        android:textSize="15sp"/>
+                        android:textSize="12sp"/>
 
                     <TextView
                         android:id="@+id/receiverPhone"
@@ -170,7 +182,7 @@
                         android:text=" Phone Number"
                         android:fontFamily="@font/segoeuibold"
                         android:textColor="@color/greyblack"
-                        android:textSize="15sp"/>
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -185,7 +197,7 @@
                         android:text="Date : "
                         android:fontFamily="@font/segoeui"
                         android:textColor="@color/greyblack"
-                        android:textSize="15sp"/>
+                        android:textSize="12sp"/>
 
                     <TextView
                         android:id="@+id/receiverDate"
@@ -194,7 +206,7 @@
                         android:text=" Date "
                         android:fontFamily="@font/segoeuibold"
                         android:textColor="@color/greyblack"
-                        android:textSize="15sp"/>
+                        android:textSize="12sp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -209,7 +221,7 @@
                             android:text="Time : "
                             android:fontFamily="@font/segoeui"
                             android:textColor="@color/greyblack"
-                            android:textSize="15sp"/>
+                            android:textSize="12sp"/>
 
                         <TextView
                             android:id="@+id/receiverTime"
@@ -218,7 +230,7 @@
                             android:text=" Time"
                             android:fontFamily="@font/segoeuibold"
                             android:textColor="@color/greyblack"
-                            android:textSize="15sp"/>
+                            android:textSize="12sp"/>
 
                     </LinearLayout>
 
@@ -227,7 +239,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="15dp"
+                    android:paddingTop="5dp"
                     android:layout_gravity="center"
                     android:paddingBottom="10dp">
 
@@ -257,7 +269,7 @@
                             android:layout_gravity="center"
                             android:fontFamily="@font/segoeuibold"
                             android:textColor="@color/greyblack"
-                            android:textSize="15sp"/>
+                            android:textSize="12sp"/>
 
                     </LinearLayout>
 
@@ -287,7 +299,7 @@
                             android:layout_gravity="center"
                             android:fontFamily="@font/segoeuibold"
                             android:textColor="@color/greyblack"
-                            android:textSize="15sp"/>
+                            android:textSize="12sp"/>
 
                     </LinearLayout>
 
@@ -306,7 +318,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tap for More details"
-                    android:textSize="13sp"
+                    android:textSize="12sp"
                     android:padding="8dp"
                     android:paddingStart="15dp"
                     android:fontFamily="@font/segoeui"
@@ -318,7 +330,7 @@
                     android:text="200m"
                     android:fontFamily="@font/segoeui"
                     android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:padding="10dp"
                     android:layout_weight="1"
                     android:gravity="end"

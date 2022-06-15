@@ -1,7 +1,9 @@
 package com.teamrocket.blooddonationcommunity;
 
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -14,6 +16,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,19 +50,34 @@ public class ProfileFragment extends Fragment  {
     FirebaseStorage storage;
     StorageReference reference;
 
+    ImageButton ProfileInfoBtn;
+
     @Override
     public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        ProfileInfoBtn = v.findViewById(R.id.ib_profile);
 
-//        //on click will load profile setting fragment on main_container
-//        ImgBtn.setOnClickListener(view -> {
-//            FragmentTransaction fr = getActivity().getSupportFragmentManager().beginTransaction();
-//            fr.replace(R.id.main_container,new ProfileSettingFragment());
-//            fr.commit();
-//            topAppBar.setTitle("Profile Settings");
-//        });
+
+        //on click will load profile setting fragment on main_container
+        ProfileInfoBtn.setOnClickListener(view -> {
+
+            FragmentTransaction fr = getActivity().getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.main_container,new ProfileSettingFragment());
+            fr.commit();
+        });
+
+
+        ImageButton PostInfoBtn = v.findViewById(R.id.ib_posts);
+
+        PostInfoBtn.setOnClickListener(view -> {
+
+            FragmentTransaction fr = getActivity().getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.main_container,new PostInfoFragment());
+            fr.commit();
+        });
+
 
         //Displaying Details
 
@@ -121,8 +139,56 @@ public class ProfileFragment extends Fragment  {
             }
         });
 
+        //Under Construction
+
+        ImageButton setting=v.findViewById(R.id.ib_setting);
+
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                popupMessage();
+            }
+        });
+
+        ImageButton support=v.findViewById(R.id.ib_support);
+
+        support.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                popupMessage();
+            }
+        });
+
+        ImageButton term=v.findViewById(R.id.ib_term);
+
+        term.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                popupMessage();
+            }
+        });
 
         return v;
+    }
+
+
+    public void popupMessage(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+        alertDialogBuilder.setMessage("Will be available soon!");
+        alertDialogBuilder.setIcon(R.drawable.construction_icon);
+        alertDialogBuilder.setTitle("Under Construction");
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Log.d("internet","Ok btn pressed");
+            }
+        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }
 

@@ -63,9 +63,7 @@ public class PostReceiver extends AppCompatActivity implements LocationListener 
     LocationManager locationManager;
     public String locCity;
     public String locState;
-    public String locPinCode;
     public String locCountry;
-    public String locArea;
     public String FullAddress;
     public int checkAdd=0;
 
@@ -76,7 +74,6 @@ public class PostReceiver extends AppCompatActivity implements LocationListener 
     public String getBloodType;
     public String getBirthDate;
     public String getAvailTime;
-    public String getAvailLoc;
     public String getMsg;
     public String getName;
     public String getPhone;
@@ -84,7 +81,7 @@ public class PostReceiver extends AppCompatActivity implements LocationListener 
     public String getLatitude;
 
     ExtendedFloatingActionButton postReceiverBtn;
-    EditText editMsgRec,editTimeRec,locPostRec;
+    EditText editMsgRec,editTimeRec;
     public String uid;
 
     @Override
@@ -217,10 +214,28 @@ public class PostReceiver extends AppCompatActivity implements LocationListener 
                 DatabaseReference myRef2 = database.getReference("Posts");
 
                 //Pushing User Details
-                myRef2.child("Receiver").child(uid).setValue(map).addOnSuccessListener(new OnSuccessListener<Void>() {
+                myRef2.child("Receiver").push().setValue(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(PostReceiver.this, "Post uploaded!", Toast.LENGTH_SHORT).show();
+
+                        //Pushing data for notification -->
+                        HashMap<String, String> mapNotif = new HashMap<>();
+                        mapNotif.put("uid",uid);
+                        mapNotif.put("bloodGroup",getBloodType);
+                        mapNotif.put("city",FullAddress);
+                        mapNotif.put("name",getName);
+
+
+                        DatabaseReference myNotifRef = database.getReference("Notification");
+                        //Pushing User Details
+                        myNotifRef.child(getBloodType).setValue(mapNotif).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                //Toast.makeText(PostReceiver.this, getBloodType + "updated", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                         Intent i = new Intent(PostReceiver.this,MainActivity.class);
                         startActivity(i);
                     }
@@ -237,8 +252,6 @@ public class PostReceiver extends AppCompatActivity implements LocationListener 
         });
 
     }
-
-
 
     //Function to get the Location -->
     private void getLocation() {

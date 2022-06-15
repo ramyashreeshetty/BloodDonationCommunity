@@ -33,8 +33,8 @@
                 android:id="@+id/makeAPost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui"
-                android:text="Make A Post"
+                android:fontFamily="@font/segoeuibold"
+                android:text="Create Post"
                 android:textColor="@color/bloodred"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -55,18 +55,30 @@
                 app:layout_constraintTop_toBottomOf="@id/makeAPost"/>
 
             <TextView
+                android:id="@+id/pointsToRem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:text="Points to remember:\nCreated Post will be displayed on the Donor Feed.\nReceiver will contact using phone number.\nPost will be valid until you delete it.\nAll necessary details must be provided in message"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/secred"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recPostDivider" />
+
+            <TextView
                 android:id="@+id/bloodTypeDon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="35dp"
                 android:fontFamily="@font/segoeui"
                 android:text="Blood Type:"
                 android:textColor="@color/cardtextcolor"
                 android:textSize="16sp"
+                android:layout_marginTop="35dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/makeAPost" />
+                app:layout_constraintTop_toBottomOf="@+id/pointsToRem" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/bloodGroupDon"
@@ -84,7 +96,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/bloodTypeDon">
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
+                    android:id="@+id/autoCompleteTextViewDon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -96,49 +108,20 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/availDon"
+                android:id="@+id/messageDon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
                 android:fontFamily="@font/segoeui"
-                android:text="Availability:"
+                android:text="Message:"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/cardtextcolor"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bloodGroupDon" />
 
             <EditText
-                android:id="@+id/editTimeDon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="@drawable/border_rect_box_post"
-                android:fontFamily="@font/segoeui"
-                android:hint="Time (e.g. 9am - 11pm)"
-                android:padding="10dp"
-                android:textColor="@color/cardtextcolor"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/availDon" />
-
-            <TextView
-                android:id="@+id/messageDon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/segoeui"
-                android:text="Message:"
-                android:textColor="@color/cardtextcolor"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTimeDon" />
-
-            <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/editMsgDon"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="15dp"
@@ -164,7 +147,7 @@
                 android:textColor="@color/cardtextcolor"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintTop_toBottomOf="@+id/editMsgDon" />
 
             <EditText
                 android:id="@+id/locPostDon"
@@ -180,7 +163,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/locDon" />
 
             <ImageView
-                android:id="@+id/getCurrentLoc"
+                android:id="@+id/getCurrentLoc2"
                 android:layout_width="26dp"
                 android:layout_height="30dp"
                 android:layout_margin="14dp"
@@ -192,6 +175,7 @@
                 app:layout_constraintTop_toTopOf="@+id/locPostDon" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/postDonorBtn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"

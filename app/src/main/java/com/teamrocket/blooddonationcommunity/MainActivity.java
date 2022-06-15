@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView toolbarTitle = findViewById(R.id.toolbar_title);
+
 
         //fab Post
         fabNavPost=findViewById(R.id.fabnavblood);
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_container,new PostFragment()).commit();
-                topAppBar.setTitle("Post");
+                toolbarTitle.setText("Posts");
             }
         });
 
@@ -51,19 +54,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.navhome:
                         fragment=new HomeFragment();
-                        topAppBar.setTitle("LIFESTREAM");
+                        toolbarTitle.setText("LifeStream");
                         break;
                     case R.id.navdonor:
                         fragment=new DonorFragment();
-                        topAppBar.setTitle("Donors");
+                        toolbarTitle.setText("Donors");
                         break;
                     case R.id.navreceiver:
                         fragment=new ReceiverFragment();
-                        topAppBar.setTitle("Receivers");
+                        toolbarTitle.setText("Receivers");
                         break;
                     case R.id.navprofile:
                         fragment=new ProfileFragment();
-                        topAppBar.setTitle("Profile");
+                        toolbarTitle.setText("Profile");
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_container,fragment).commit();

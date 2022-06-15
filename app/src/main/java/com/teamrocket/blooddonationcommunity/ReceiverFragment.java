@@ -22,13 +22,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReceiverFragment extends Fragment {
 
     RecyclerView recyclerView;
-    DatabaseReference database;
     ReceiverAdapter receiverAdapter;
     ArrayList<ReceiverData> list;
+    ArrayList<String> keys = new ArrayList<String>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,21 +44,19 @@ public class ReceiverFragment extends Fragment {
 
         list = new ArrayList<>();
 
-
-
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                list.clear();
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
 
                     ReceiverData receiverData= dataSnapshot.getValue(ReceiverData.class);
                     list.add(receiverData);
+                    keys.add(dataSnapshot.getKey());
                 }
 
-                receiverAdapter = new ReceiverAdapter(getActivity(),list);
+                receiverAdapter = new ReceiverAdapter(getActivity(),list,keys);
                 recyclerView.setAdapter(receiverAdapter);
-
                 receiverAdapter.notifyDataSetChanged();
             }
 

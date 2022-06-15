@@ -51,8 +51,6 @@ public class PostFragment extends Fragment {
                         getName = dataSnapshot.child("full_name").getValue(String.class);
                         getPhone = dataSnapshot.child("phone_number").getValue(String.class);
 
-                        Toast.makeText(getActivity(), getName, Toast.LENGTH_SHORT).show();
-
                     }
 
                     @Override

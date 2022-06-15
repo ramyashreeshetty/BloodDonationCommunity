@@ -27,8 +27,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/cardProfileImg"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:src="@drawable/loli"
                 android:layout_margin="15dp"
                 app:civ_border_width="0.5dp"
@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Loli Loli"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     android:textColor="@color/cardtextcolor"
                     android:fontFamily="@font/segoeuibold"/>
 
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Blood Group: "
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/cardtextcolor"
                         android:fontFamily="@font/segoeui"/>
 
@@ -71,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="B(+)"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/cardtextcolor"
                         android:fontFamily="@font/segoeuibold"/>
 
@@ -89,14 +89,14 @@
                         android:fontFamily="@font/segoeui"
                         android:text="Birth Date: "
                         android:textColor="@color/cardtextcolor"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/cardAge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="8"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/cardtextcolor"
                         android:fontFamily="@font/segoeuibold"/>
 
@@ -215,7 +215,7 @@
                             android:layout_marginTop="20dp"
                             android:fontFamily="@font/segoeui"
                             android:text="Featured"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -269,7 +269,7 @@
                             android:layout_marginTop="20dp"
                             android:fontFamily="@font/segoeui"
                             android:text="Nearby Donation\nCamp"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -323,7 +323,7 @@
                             android:layout_marginTop="20dp"
                             android:fontFamily="@font/segoeui"
                             android:text="Nearby Blood\nBanks"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"

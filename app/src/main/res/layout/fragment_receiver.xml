@@ -9,7 +9,7 @@
 
     <SearchView
         android:id="@+id/searchView"
-        android:background="@color/cardBlue"
+        android:background="@drawable/search_background"
         android:layoutDirection="rtl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

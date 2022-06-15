@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/gridPostCard"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="15dp"
+
+    app:cardUseCompatPadding="true"
+    android:backgroundTint="@color/cardBlue">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:src="@drawable/rec_blood_icon"
+                android:padding="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Group : "
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/cardtextcolor"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/postBG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" (B+)"
+                        android:fontFamily="@font/segoeuibold"
+                        android:textColor="@color/cardtextcolor"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City : "
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/cardtextcolor"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/postCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" My City"
+                        android:fontFamily="@font/segoeuibold"
+                        android:textColor="@color/cardtextcolor"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : "
+                        android:fontFamily="@font/segoeui"
+                        android:textColor="@color/cardtextcolor"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/postDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Date"
+                        android:fontFamily="@font/segoeuibold"
+                        android:textColor="@color/cardtextcolor"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="2dp"
+                android:background="@color/cardtextcolor">
+
+                <ImageView
+                    android:id="@+id/deletePostBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/open_ic"
+                    android:backgroundTint="#34CD12"
+                    app:elevation="20dp"
+                    android:elevation="10dp"
+                    android:padding="5dp"
+                    app:tint="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

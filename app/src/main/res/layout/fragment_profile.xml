@@ -37,7 +37,7 @@
                 android:text="Your Name"
                 android:fontFamily="@font/segoeui"
                 android:textColor="@color/appTextBlack"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:layout_gravity="center_horizontal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -66,14 +66,14 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/segoeui"
                         android:text="General Information"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <ImageButton
+                        android:id="@+id/ib_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/transparent_bg"
                         android:contentDescription="forward"
-                        android:id="@+id/ib_profile"
                         android:src="@drawable/forwardarrow" />
 
 
@@ -97,10 +97,11 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         android:fontFamily="@font/segoeui"
-                        android:text="Posts"
-                        android:textSize="16sp" />
+                        android:text="Receiver Posts"
+                        android:textSize="14sp" />
 
                     <ImageButton
+                        android:id="@+id/ib_posts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/transparent_bg"
@@ -129,9 +130,10 @@
                         android:layout_weight="1"
                         android:text="Settings"
                         android:fontFamily="@font/segoeui"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <ImageButton
+                        android:id="@+id/ib_setting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/transparent_bg"
@@ -168,9 +170,10 @@
                             android:layout_weight="1"
                             android:text="Support"
                             android:fontFamily="@font/segoeui"
-                            android:textSize="16sp" />
+                            android:textSize="14sp" />
 
                         <ImageButton
+                            android:id="@+id/ib_support"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/transparent_bg"
@@ -199,9 +202,10 @@
                             android:layout_weight="1"
                             android:text="Terms and Conditions"
                             android:fontFamily="@font/segoeui"
-                            android:textSize="16sp" />
+                            android:textSize="14sp" />
 
                         <ImageButton
+                            android:id="@+id/ib_term"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/transparent_bg"
@@ -227,10 +231,11 @@
                 android:text="Log out"
                 android:gravity="center"
                 app:elevation="20dp"
+                android:backgroundTint="@color/white"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/bloodred"
                 android:fontFamily="@font/segoeui"/>
 
 

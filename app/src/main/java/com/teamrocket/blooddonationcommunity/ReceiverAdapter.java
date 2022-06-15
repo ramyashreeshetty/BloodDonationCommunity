@@ -2,29 +2,35 @@ package com.teamrocket.blooddonationcommunity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewHolder> implements Filterable {
 
     Context context;
     ArrayList<ReceiverData> list;
     ArrayList<ReceiverData> listFull;
+    ArrayList<String> keys;
 
     public ReceiverAdapter(Context context, ArrayList<ReceiverData> list) {
         this.context = context;
@@ -32,17 +38,41 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
         this.list=new ArrayList<>(listFull);
     }
 
+    public ReceiverAdapter(Context context, ArrayList<ReceiverData> list,ArrayList<String> keys) {
+        this.context = context;
+        this.listFull = list;
+        this.list=new ArrayList<>(listFull);
+        this.keys=keys;
+    }
+
     @NonNull
     @Override
-    public RViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType ) {
 
         View v = LayoutInflater.from(context).inflate(R.layout.receiver_item,parent,false);
+
         return new RViewHolder(v);
 
     }
 
+    public void deleteItem(int position){
+
+        String key = keys.get(position);
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Posts").child("Receiver");
+        ref.child(key).removeValue();
+
+        list.remove(position);
+        list.clear();
+        notifyItemRemoved(position);
+
+
+
+    }
+
+
     @Override
     public void onBindViewHolder(@NonNull RViewHolder holder, int position) {
+
 
         ReceiverData rd = list.get(position);
         holder.bloodGroup.setText(rd.getBloodGroup());
@@ -50,8 +80,9 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
         holder.date.setText(rd.getDate());
         holder.extraMsg.setText(rd.getExtraMsg());
         holder.name.setText(rd.getName());
-        holder.phoneNumber.setText(rd.getLatitude());
-        holder.time.setText(rd.getLongitude());
+        holder.phoneNumber.setText(rd.getPhoneNumber());
+        holder.time.setText(rd.getTime());
+
 
         //onclick of itemView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +111,7 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
                 String num=rd.getPhoneNumber().trim();
                 num=num.replace("+91","");
                 num="tel:"+num;
-                Toast.makeText(context, num, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, num, Toast.LENGTH_SHORT).show();
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse(num));
                 view.getContext().startActivity(callIntent);
@@ -92,14 +123,14 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
             @Override
             public void onClick(View view) {
 
-                String lat=rd.getLatitude().trim();
-                String lon=rd.getLongitude().trim();
-
 //                double latitude = Double.parseDouble(lat);
 //                double longitude = Double.parseDouble(lon);
 //                String uri = String.format(Locale.ENGLISH, "geo:%f,%f", 13.0698673,74.9973597);
 //                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
 //                context.startActivity(intent);
+
+                String lat=rd.getLatitude().trim();
+                String lon=rd.getLongitude().trim();
 
 
                 Intent myIntent = new Intent(view.getContext(),TrackMapActivity.class);
@@ -109,6 +140,18 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
 
             }
         });
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                deleteItem(position);
+                notifyDataSetChanged();
+
+            }
+        });
+
+
 
     }
 
@@ -167,8 +210,9 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
         TextView bloodGroup,city,date,extraMsg,name,phoneNumber,time;
         LinearLayout expandedReceiverCard;
         FloatingActionButton cardCallBtn,cardTrackBtn;
+        ImageView delete;
 
-        public RViewHolder(@NonNull View itemView) {
+        public RViewHolder(@NonNull View itemView ) {
             super(itemView);
 
             bloodGroup=itemView.findViewById(R.id.receiverBG);
@@ -181,6 +225,8 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
             expandedReceiverCard=itemView.findViewById(R.id.expandedReceiverCard);
             cardCallBtn=itemView.findViewById(R.id.cardCallBtn);
             cardTrackBtn=itemView.findViewById(R.id.cardTrackBtn);
+            delete = itemView.findViewById(R.id.doneBtn);
+
 
         }
     }
