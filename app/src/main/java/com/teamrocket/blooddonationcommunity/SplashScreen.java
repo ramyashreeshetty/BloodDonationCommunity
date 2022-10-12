@@ -53,3 +53,8 @@ public class SplashScreen extends AppCompatActivity {
         return prefs.getBoolean("login", false);
     }
 }
+
+
+
+
+

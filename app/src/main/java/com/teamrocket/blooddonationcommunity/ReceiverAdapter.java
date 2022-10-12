@@ -65,8 +65,6 @@ public class ReceiverAdapter extends RecyclerView.Adapter<ReceiverAdapter.RViewH
         list.clear();
         notifyItemRemoved(position);
 
-
-
     }
 
 
